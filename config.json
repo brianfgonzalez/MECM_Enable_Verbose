@@ -1,0 +1,32 @@
+{
+    "component":[
+       {
+          "name":"MECM Client",
+          "install_registry_path":"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\CCM",
+          "enable_verbose":[
+             "Set-ItemProperty -Path \"HKLM:\\Software\\Microsoft\\CCM\\Logging\\@GLOBAL\" -Name \"LogLevel\" -Value \"0\" -ErrorAction SilentlyContinue"
+          ],
+          "enable_debug":[
+             "New-Item -Path \"HKLM:\\Software\\Microsoft\\CCM\\Logging\\DebugLogging\" -ErrorAction SilentlyContinue",
+             "Set-ItemProperty -Path \"HKLM:\\Software\\Microsoft\\CCM\\Logging\\DebugLogging\" -Name \"Enabled\" -Value \"True\" -ErrorAction SilentlyContinue"
+          ],
+          "file_size":"HKLM:\\Software\\Microsoft\\CCM\\Logging\\@GLOBAL\\LogMaxSize",
+          "file_history":"HKLM:\\Software\\Microsoft\\CCM\\Logging\\@GLOBAL\\LogMaxHistory",
+          "debug_logging_enabled":"HKLM:\\Software\\Microsoft\\CCM\\Logging\\DebugLogging\\Enabled\\True"
+       },
+       {
+          "name":"Management Point",
+          "install_registry_path":"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\SMS\\Components\\SMS_EXECUTIVE\\Threads\\SMS_MP_CONTROL_MANAGER",
+          "enable_verbose":[
+             "Set-ItemProperty -Path \"HKLM:\\Software\\Microsoft\\CCM\\Logging\\@GLOBAL\" -Name \"LogLevel\" -Value \"0\" -ErrorAction SilentlyContinue"
+          ],
+          "enable_debug":[
+             "New-Item -Path \"HKLM:\\Software\\Microsoft\\CCM\\Logging\\DebugLogging\" -ErrorAction SilentlyContinue",
+             "Set-ItemProperty -Path \"HKLM:\\Software\\Microsoft\\CCM\\Logging\\DebugLogging\" -Name \"Enabled\" -Value \"True\" -ErrorAction SilentlyContinue"
+          ],
+          "file_size":"HKLM:\\Software\\Microsoft\\CCM\\Logging\\@GLOBAL\\LogMaxSize",
+          "file_history":"HKLM:\\Software\\Microsoft\\CCM\\Logging\\@GLOBAL\\LogMaxHistory",
+          "debug_logging_enabled":"HKLM:\\Software\\Microsoft\\CCM\\Logging\\DebugLogging\\Enabled\\True"
+       }
+    ]
+ }
